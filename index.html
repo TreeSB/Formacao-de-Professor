@@ -52,17 +52,18 @@
             <button type="submit">Inscrever-se</button>
         </form>
     </div>
-</body>
-</html>
+    <script>
 document.getElementById("inscricao-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Impede o recarregamento da página
     
     var formData = new FormData(this);
-    fetch("https://script.google.com/macros/s/AKfycbzR0hZ8ojFgZM2q-pijZaB0sYmcOr8e6qCwHx4guUxbS7JqxJEVZoSdO2eriODQtP6sXA/exec", {
-        method: "POST",
+    
+    fetch("SEU_WEBHOOK_URL", {  https://script.google.com/macros/s/AKfycbzR0hZ8ojFgZM2q-pijZaB0sYmcOr8e6qCwHx4guUxbS7JqxJEVZoSdO2eriODQtP6sXA/exec,
         body: formData
     })
     .then(response => response.text())
     .then(data => alert("Inscrição enviada com sucesso!"))
     .catch(error => alert("Erro ao enviar inscrição."));
 });
+</script>
+</body>
