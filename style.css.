@@ -1,12 +1,18 @@
-/* Estilos gerais */
-body {
+/* Reset para remover estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
     background-color: #1e1e1e;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 /* Caixa do formulário */
